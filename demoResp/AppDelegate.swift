@@ -7,7 +7,7 @@
 
 import UIKit
 import GoogleSignIn
-import Firebase
+//import Firebase
 import UserNotifications
 
 @main
@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
+      //  FirebaseApp.configure()
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
               // Show the app's signed-out state.
@@ -25,7 +25,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               // Show the app's signed-in state.
             }
           }
-        pushNotificationPermission(application)
+       // pushNotificationPermission(application)
+        
+        print(AuthManager.shared.signInUrl?.absoluteString)
+        
+        
+        AuthManager.shared.refreshIfNeeded { (success) in
+            print(success)
+        }
+        
         return true
     }
     
@@ -62,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
+/*
 //MARK:- Firebase Push Notification Method
 extension AppDelegate:UNUserNotificationCenterDelegate,MessagingDelegate{
     
@@ -152,3 +160,4 @@ extension AppDelegate:UNUserNotificationCenterDelegate,MessagingDelegate{
     }
     
 }
+*/

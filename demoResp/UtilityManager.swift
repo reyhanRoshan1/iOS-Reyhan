@@ -5,7 +5,7 @@
 //  Created by Surinder on 20/08/19.
 //  Copyright © 2019 Surinder. All rights reserved.
 //
-
+/*
 import Foundation
 import FirebaseDatabase
 import SCLAlertView
@@ -230,3 +230,4 @@ class UtilityManager: NSObject {
         }
     }
 }
+*/

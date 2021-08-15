@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		265108A726C9259B002B6417 /* SpotifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265108A626C9259B002B6417 /* SpotifyVC.swift */; };
+		265108AC26C9264D002B6417 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265108AB26C9264D002B6417 /* AuthManager.swift */; };
+		265108B726C93D02002B6417 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265108B626C93D02002B6417 /* AuthResponse.swift */; };
 		265755E526BFB6B400344159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265755E426BFB6B400344159 /* AppDelegate.swift */; };
 		265755E726BFB6B400344159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265755E626BFB6B400344159 /* SceneDelegate.swift */; };
 		265755E926BFB6B400344159 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265755E826BFB6B400344159 /* ViewController.swift */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		04312D182E38854758C9378E /* Pods-demoResp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demoResp.debug.xcconfig"; path = "Target Support Files/Pods-demoResp/Pods-demoResp.debug.xcconfig"; sourceTree = "<group>"; };
 		0F7FFF78F8104FEF961FCDA8 /* Pods-demoRespTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demoRespTests.release.xcconfig"; path = "Target Support Files/Pods-demoRespTests/Pods-demoRespTests.release.xcconfig"; sourceTree = "<group>"; };
+		265108A626C9259B002B6417 /* SpotifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyVC.swift; sourceTree = "<group>"; };
+		265108AB26C9264D002B6417 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		265108B626C93D02002B6417 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		265755E126BFB6B400344159 /* demoResp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoResp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		265755E426BFB6B400344159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		265755E626BFB6B400344159 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,9 @@
 				265755E626BFB6B400344159 /* SceneDelegate.swift */,
 				265755E826BFB6B400344159 /* ViewController.swift */,
 				2657564826BFFE2F00344159 /* UtilityManager.swift */,
+				265108A626C9259B002B6417 /* SpotifyVC.swift */,
+				265108AB26C9264D002B6417 /* AuthManager.swift */,
+				265108B626C93D02002B6417 /* AuthResponse.swift */,
 				265755EA26BFB6B400344159 /* Main.storyboard */,
 				265755ED26BFB6BC00344159 /* Assets.xcassets */,
 				265755EF26BFB6BC00344159 /* LaunchScreen.storyboard */,
@@ -410,7 +419,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				265755E926BFB6B400344159 /* ViewController.swift in Sources */,
+				265108AC26C9264D002B6417 /* AuthManager.swift in Sources */,
+				265108A726C9259B002B6417 /* SpotifyVC.swift in Sources */,
 				265755E526BFB6B400344159 /* AppDelegate.swift in Sources */,
+				265108B726C93D02002B6417 /* AuthResponse.swift in Sources */,
 				2657564926BFFE2F00344159 /* UtilityManager.swift in Sources */,
 				265755E726BFB6B400344159 /* SceneDelegate.swift in Sources */,
 			);
@@ -590,12 +602,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RNEWLY2A4;
 				INFOPLIST_FILE = demoResp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.surinder.demoResp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quadrant.tictactoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -609,12 +622,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RNEWLY2A4;
 				INFOPLIST_FILE = demoResp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.surinder.demoResp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quadrant.tictactoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
