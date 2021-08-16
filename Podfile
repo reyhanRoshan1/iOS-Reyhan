@@ -7,6 +7,7 @@ target 'demoResp' do
 
   # Pods for demoResp
   pod 'GoogleSignIn'
+  pod "Popover"
 
   target 'demoRespTests' do
     inherit! :search_paths

@@ -12,9 +12,11 @@ PODS:
     - AppAuth/Core (~> 1.4)
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.6.1)
+  - Popover (1.3.0)
 
 DEPENDENCIES:
   - GoogleSignIn
+  - Popover
 
 SPEC REPOS:
   trunk:
@@ -22,13 +24,15 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - Popover
 
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   GoogleSignIn: 1b0c4ec33a6fe282f4fa35d8ac64263230ddaf36
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
+  Popover: 10e1d9528f81d9504df984b7b3f491292bc1822d
 
-PODFILE CHECKSUM: e131e4216d05d50475b3f2f33c3ae8739eaa5cb0
+PODFILE CHECKSUM: 3180b65562d608550506891f0f531d5d2fc2dc8d
 
 COCOAPODS: 1.10.1

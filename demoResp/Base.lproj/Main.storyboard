@@ -15,10 +15,30 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWo-B8-rBF">
+                                <rect key="frame" x="314" y="108" width="80" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="BAx-sp-3SE"/>
+                                    <constraint firstAttribute="height" constant="45" id="VSN-Af-9H6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnAtion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VWv-mB-NLW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JWo-B8-rBF" secondAttribute="trailing" constant="20" id="hFu-FJ-Pfm"/>
+                            <constraint firstItem="JWo-B8-rBF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xiG-fj-6Q1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nm6-l3-hJB"/>
+                    <connections>
+                        <outlet property="btnAction" destination="JWo-B8-rBF" id="bYq-aH-hLD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
