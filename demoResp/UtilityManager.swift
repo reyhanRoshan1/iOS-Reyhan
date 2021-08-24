@@ -230,4 +230,39 @@ class UtilityManager: NSObject {
         }
     }
 }
+ 
+ static var share: NewBookingPopup? = nil
+ static var instance: NewBookingPopup {
+     
+     if (share == nil) {
+         share = Bundle(for: self).loadNibNamed("Newbooking",
+                                                owner: nil,
+                                                options: nil)?.first as? NewBookingPopup
+     }
+     return share!
+ }
+ 
+ func show(needToShowDropMarker:Bool) {
+     
+         let window = UIApplication.shared.keyWindow
+         self.frame = (window?.frame)!
+         window?.addSubview(self)
+         
+         self.alpha = 0.0
+     UIView.animate(withDuration: 1.5, delay: 1, usingSpringWithDamping: 0.0, initialSpringVelocity: 0, options: .transitionCrossDissolve) {
+         self.alpha = 1.0
+     } completion: { (_) in
+         
+     }
+
+    
+     
+ }
+ //show
+ @objc func popUp(){
+     let Vc:patronPopUp = patronPopUp.instance
+     Vc.show(needToShowDropMarker: true)
+ }
+ 
+ 
 */

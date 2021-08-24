@@ -11,16 +11,14 @@ import Popover
 
 class student{
     
-    var name : String = ""
+    var group : String = ""
     var roll : String = ""
     var header : String = ""
     var info : String = ""
     
     func setDict(dict:[String:String]){
-        self.name = dict["name"] ?? ""
-        self.roll = dict["roll"] ?? ""
+        self.group = dict["group"] ?? ""
         self.header = dict["header"] ?? ""
-        self.info = dict["info"] ?? ""
     }
 }
 
@@ -30,7 +28,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnAction: UIButton!
     
     
-    var arrayDict = [["name":"hh1","roll":"32","header":"txt","info":""],["name":"hh2","roll":"32","header":"string","info":"info"],["name":"hh3","roll":"32","header":"info","info":""],["name":"hh4","roll":"32","header":"txt","info":"info"],["name":"hh5","roll":"32","header":"info","info":""]]
+    var arrayDict = [["group":"transportation","roll":"32","header":"txt1","info":""],["group":"other services","roll":"32","header":"string2","info":"info"],["group":"other services","roll":"32","header":"info3","info":""],["group":"other services","roll":"32","header":"txt4","info":"info"],["group":"transportation","roll":"32","header":"info5","info":""]]
+    
+    var str = "[<a href=https://www.w3schools.com>Visit W3Schools</a>]"
     
     var lastin = 0
     
@@ -46,6 +46,25 @@ class ViewController: UIViewController {
        // perform(#selector(signInGoogle), with: nil, afterDelay: 2.0)
         print("AuthManager.shared.isSignedIn",AuthManager.shared.isSignedIn)
         print("AuthManager.shared.accessToke:- ",AuthManager.shared.accessToken)
+        
+        let get = str.components(separatedBy: "emails")
+    
+        
+        let url = URL(string: "href=mailto:test@test.com")!
+        if url.scheme == "mailto",
+            let components = URLComponents(url: url, resolvingAgainstBaseURL: false) {
+            let email = components.path
+            print(email)  // "test@test.com\n"
+        }
+          
+        
+        for value in str.components(separatedBy: ":"){
+            
+            if value != "emails"{
+                
+            }
+            
+        }
       /*
         if AuthManager.shared.isSignedIn{
             print("already login")
@@ -59,6 +78,30 @@ class ViewController: UIViewController {
     }
     
     func checkDict(){
+        
+        
+        
+        for value in arrayDict{
+            let obj = student()
+            obj.setDict(dict: value)
+            self.newArray.append(obj)
+        }
+        
+        
+        if let array = newArray.filter({$0.group == "transportation"}) as? [student]{
+            
+            print(array.count)
+            
+        }
+        
+        if let arrayOther = newArray.filter({$0.group == "other services"}) as? [student]{
+            for value in arrayOther{
+                print(value.header)
+            }
+        }
+        
+        
+        /*
         for value in arrayDict{
             let obj = student()
             obj.setDict(dict: value)
@@ -80,6 +123,7 @@ class ViewController: UIViewController {
         for value in self.newArray{
             print("new value",value.info)
         }
+        */
     }
     
     @objc func handleSignIn(){
